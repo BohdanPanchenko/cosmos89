@@ -1,3 +1,4 @@
+//  ----------------------BURGER MENU--------------------------------
 const burgerBtn = document.querySelector('.burger');
 const navBar = document.querySelector('.menu');
 
@@ -16,6 +17,54 @@ burgerBtn.addEventListener('click', (e) => {
     burgerBtn.classList.toggle('burger_active');
 })
 
+// ---------------------------COURSES PAGE TABS---------------------------------------
+const CoursesTitle = document.querySelector('.courses__title');
+const coursersButtons = document.querySelectorAll('.nav-menu__item button');
+const coursesCards = document.querySelectorAll('.item-courses');
+const dropDown = document.querySelector('.side-bar__drop-down');
+const dropDownBtn = document.querySelector('.side-bar__drop-down button');
+
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.nav-menu__item')) {
+        CoursesTitle.innerHTML = e.target.innerHTML;
+
+        const innerDropDown = dropDown.textContent;
+        dropDown.innerHTML = e.target.textContent;
+        dropDown.appendChild(dropDownBtn);
+
+        coursersButtons.forEach(el => {
+            if (el.classList.contains('active'))
+                el.classList.remove('active');
+        })
+
+        e.target.classList.add('active');
+
+        const tagName = e.target.innerHTML.toLowerCase().replace(' ', '-');
+
+        coursesCards.forEach(el => {
+            const categories = el.dataset.category.split(' ');
+            let counter = 0;
+            categories.forEach(item => {
+                if (tagName === item) {
+                    el.classList.add('visible');
+                    counter++;
+                }
+            })
+            if (counter === 0) {
+                el.classList.remove('visible');
+            }
+        })
+    }
+
+    const sideBar = document.querySelector('.nav-menu'); // реализовыаем выпадающий список
+
+    if (e.target.closest('.side-bar__drop-down')) {
+        sideBar.classList.toggle('visible');
+        console.log(e.target + ' !!')
+    }
+})
+
+// ---------------------------SWIPER SLIDER---------------------------------------
 if (document.querySelector('.swiper')) {
     const swiper = new Swiper('.swiper', {
         // Optional parameters
@@ -23,13 +72,13 @@ if (document.querySelector('.swiper')) {
         loop: true,
         // spaceBetween: 104,
         allowSlideNext: true,
-        // If we need pagination
+
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
 
-        // Navigation arrows
+
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',

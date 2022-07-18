@@ -61,7 +61,13 @@ document.addEventListener('click', (e) => {
     if (e.target.closest('.side-bar__drop-down')) {
         sideBar.classList.toggle('visible');
         console.log(e.target + ' !!')
+    } else if (e.target.closest('.nav-menu')) {
+        setTimeout(() => {
+            sideBar.classList.toggle('visible');
+
+        }, 150)
     }
+
 })
 
 // ---------------------------SWIPER SLIDER---------------------------------------

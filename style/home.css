@@ -97,7 +97,7 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url("/images/header/phone-icon.svg");
+            background-image: url("./images/header/phone-icon.svg");
         }
         
         .logo {

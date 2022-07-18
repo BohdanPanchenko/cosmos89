@@ -99,7 +99,7 @@ body {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("/images/header/phone-icon.svg");
+    background-image: url("./images/header/phone-icon.svg");
 }
 
 .logo {
@@ -723,10 +723,6 @@ body {
     padding: 42px 0 100px;
 }
 
-.community__container {}
-
-.container {}
-
 .community__item {
     margin-bottom: 66px;
 }
@@ -749,14 +745,6 @@ body {
 .column-community {
     position: relative;
 }
-
-
-/* .community__column:nth-child(1)::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: ;
-} */
 
 .community__column:nth-child(1) {
     background: linear-gradient(0deg, rgba(228, 48, 55, 0.05), rgba(228, 48, 55, 0.05)), #FFFFFF;
@@ -914,8 +902,6 @@ body {
     padding-right: 10px;
 }
 
-.footer__social-media {}
-
 .social-media-list {
     column-gap: 40px;
 }
@@ -930,12 +916,6 @@ body {
 .social-media-link svg:hover {
     transform: scale(1.3);
 }
-
-.column-footer__nav {}
-
-.column-footer__list {}
-
-.column-footer__item {}
 
 .column-footer__link,
 .column-footer__item {

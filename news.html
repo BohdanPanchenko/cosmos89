@@ -10,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./style/courses.css">
+    <link rel="stylesheet" href="./style/news.css">
 
 
-    <title>Courses</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -56,98 +56,164 @@
                         <ul class="menu__list">
                             <li class="menu__item"><a href="./index.html" class="menu__link">Home</a></li>
                             <li class="menu__item"><a href="./about-us.html" class="menu__link">About Us</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Courses</a></li>
+                            <li class="menu__item"><a href="./courses.html" class="menu__link">Courses</a></li>
                             <li class="menu__item"><a href="#" class="menu__link">News</a></li>
-                            <li class="menu__item"><a href="./contact-us.html" class="menu__link">Contact Us</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
-
-
         <main class="main">
-            <div class="main__container container">
 
-                <aside class="side-bar">
-                    <div class="side-bar__drop-down">All<button type="button"><svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.5" d="M1.18 0.519999L5 4.36L8.82 0.519999L10 1.7L5 6.7L0 1.7L1.18 0.519999Z" fill="black"/>
-                        </svg>
-                        </button></div>
-                    <nav class="side-bar__menu nav-menu">
-                        <h3 class="nav-menu__header">Categories</h3>
-                        <ul class="nav-menu__list">
-                            <li class="nav-menu__item"><button type="button" class="active">All</button></li>
-                            <li class="nav-menu__item"><button type="button">NFT</button></li>
-                            <li class="nav-menu__item"><button type="button">Metaverse</button></li>
-                            <li class="nav-menu__item"><button type="button">Cryptocurrency</button></li>
-                            <li class="nav-menu__item"><button type="button">Financial History</button></li>
-                            <li class="nav-menu__item"><button type="button">Financial Literacy</button></li>
-                            <li class="nav-menu__item"><button type="button">Monetary Systems</button></li>
-                            <li class="nav-menu__item"><button type="button">Investment Banking</button></li>
-                        </ul>
+            <section class="news">
+                <div class="news___container container">
+                    <h2 class="news__header">News</h2>
+                    <nav class="news__nav-tabs tabs-nav">
+                        <button type="button" class="tabs-nav__btn">All</button>
+                        <button type="button" class="tabs-nav__btn">Cryptocurrency</button>
+                        <button type="button" class="tabs-nav__btn">Metaverse</button>
+                        <button type="button" class="tabs-nav__btn">Monetary System</button>
+                        <button type="button" class="tabs-nav__btn">Investment</button>
+                        <button type="button" class="tabs-nav__btn">Financial History</button>
+                        <button type="button" class="tabs-nav__btn">Financial Literacy</button>
+                        <button type="button" class="tabs-nav__btn">NFT</button>
                     </nav>
-                </aside>
-                <section class="courses">
-                    <h3 class="courses__route">Courses</h3>
-                    <div class="courses__header">
+                    <div class="news__items">
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-1.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Cryptocurrency</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
 
-                        <div class="courses__title">All</div>
-                        <p class="courses__description">Learn everything that fasinates you about finances.</p>
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-2.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Metaverse</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
 
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-3.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Investment</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
+
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-4.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Metaverse</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
+
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-5.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Investment</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
+
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-6.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Cryptocurrency</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
+
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-7.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Metaverse</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
+
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-8.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Investment</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
+
+                        <a class="news__item item-news">
+                            <div class="image-wrapper">
+                                <div class="item-news__image"><img src="./images/news-page/news-9.jpg" alt="news image"></div>
+                            </div>
+                            <div class="item-news__label">
+                                <button type="button" class="item-news__category">Cryptocurrency</button>
+                                <div class="item-news__date">Apr 23, 2022</div>
+                            </div>
+                            <div class="item-news__info">
+                                <h3 class="item-news__title">The Complete Investment Banking Course : Learn Quick...</h3>
+                                <p class="item-news__description">This course will educate you about investment banking so that you...</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="courses__body">
-                        <div class="courses__item item-courses visible" data-category="nft financial-history all">
-                            <div class="item-courses__image"><img src="./images/courses-page/card-img1.png" alt="financial img"></div>
-                            <div class="item-courses__info">
-                                <h3 class="item-courses__title">The Complete Investment Banking Course : Learn Quick &...</h3>
-                                <p class="item-courses__description">This course will educate you about investment banking so that you can...</p>
-                            </div>
-                        </div>
+                </div>
+            </section>
 
-                        <div class="courses__item item-courses visible" data-category="metaverse monetary-systems all">
-                            <div class="item-courses__image"><img src="./images/courses-page/card-img2.png" alt="financial img"></div>
-                            <div class="item-courses__info">
-                                <h3 class="item-courses__title">Fundamentales of Financial History & Literacy Course</h3>
-                                <p class="item-courses__description">This course will educate you about investment banking so that you can...</p>
-                            </div>
-                        </div>
 
-                        <div class="courses__item item-courses visible" data-category="nft metaverse financial-history all">
-                            <div class="item-courses__image"><img src="./images/courses-page/card-img3.png" alt="financial img"></div>
-                            <div class="item-courses__info">
-                                <h3 class="item-courses__title">The Complete Investment Banking Course : Learn Quick &...</h3>
-                                <p class="item-courses__description">This course will educate you about investment banking so that you can...</p>
-                            </div>
-                        </div>
-
-                        <div class="courses__item item-courses visible" data-category="investment-banking financial-literacy cryptocurrency all">
-                            <div class="item-courses__image"><img src="./images/courses-page/card-img4.png" alt="financial img"></div>
-                            <div class="item-courses__info">
-                                <h3 class="item-courses__title">Young Entrepreneurs : Sample Business Plan For kids</h3>
-                                <p class="item-courses__description">This course will educate you about investment banking so that you can...</p>
-                            </div>
-                        </div>
-
-                        <div class="courses__item item-courses visible" data-category="monetary-systems financial-literacy all">
-                            <div class="item-courses__image"><img src="./images/courses-page/card-img5.png" alt="financial img"></div>
-                            <div class="item-courses__info">
-                                <h3 class="item-courses__title">The Complete Investment Banking Course : Learn Quick &...</h3>
-                                <p class="item-courses__description">This course will educate you about investment banking so that you can...</p>
-                            </div>
-                        </div>
-
-                        <div class="courses__item item-courses visible" data-category="cryptocurrency investment-banking all">
-                            <div class="item-courses__image"><img src="./images/courses-page/card-img6.png" alt="financial img"></div>
-                            <div class="item-courses__info">
-                                <h3 class="item-courses__title">The Complete Investment Banking Course : Learn Quick &...</h3>
-                                <p class="item-courses__description">This course will educate you about investment banking so that you can...</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
         </main>
+
+
+        <!-- ---------------------------FOOTER------------------------------------- -->
         <footer class="footer">
             <div class="footer__container container">
                 <div class="footer__column column-footer">
@@ -179,9 +245,9 @@
                 <div class="footer__column column-footer">
                     <nav class="column-footer__nav">
                         <ul class="column-footer__list">
-                            <li class="column-footer__item"><a href="#" class="column-footer__link">Home</a></li>
-                            <li class="column-footer__item"><a href="#" class="column-footer__link">About Us</a></li>
-                            <li class="column-footer__item"><a href="#" class="column-footer__link">Contact Us</a></li>
+                            <li class="column-footer__item"><a href="./index.html" class="column-footer__link">Home</a></li>
+                            <li class="column-footer__item"><a href="./about-us.html" class="column-footer__link">About Us</a></li>
+                            <li class="column-footer__item"><a href="./contact-us.html" class="column-footer__link">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -189,7 +255,7 @@
                 <div class="footer__column column-footer">
                     <nav class="column-footer__nav">
                         <ul class="column-footer__list">
-                            <li class="column-footer__item"><a href="#" class="column-footer__link">Courses</a></li>
+                            <li class="column-footer__item"><a href="./courses.html" class="column-footer__link">Courses</a></li>
                             <li class="column-footer__item"><a href="#" class="column-footer__link">News</a></li>
                             <li class="column-footer__item"><a href="#" class="column-footer__link">Knowledge</a></li>
                         </ul>
@@ -210,7 +276,7 @@
 
         </footer>
     </div>
-    <script src="./main.js"></script>
+    <script src="./news.js"></script>
 </body>
 
 </html>

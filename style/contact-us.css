@@ -368,7 +368,7 @@
                                 position: absolute;
                                 content: "";
                                 width: 100%;
-                                height: 409px;
+                                height: 254px;
                                 left: 0;
                                 right: 0;
                                 top: 0;
@@ -382,11 +382,6 @@
                                 column-gap: 100px;
                                 padding: 80px 15px 100px;
                             }
-                            /* .contact-us__container>* {
-    flex-basis: 50%;
-} */
-                            
-                            .container {}
                             
                             .contact-us__container .decor {
                                 display: none;
@@ -396,8 +391,6 @@
                                 padding-top: 28px;
                                 width: 420px;
                             }
-                            
-                            .contacts {}
                             
                             .contacts__header {
                                 font-family: 'Montserrat';
@@ -528,14 +521,6 @@
                                 grid-column-start: span 2;
                             }
                             
-                            .form__email-field {}
-                            
-                            .form__phone-number-field {}
-                            
-                            .form__company-field {}
-                            
-                            .form__reason {}
-                            
                             .form__reason select {
                                 font-family: 'Inter';
                                 font-style: normal;
@@ -638,6 +623,9 @@
                             }
                             
                             @media(max-width:1023px) {
+                                .contact-us::before {
+                                    height: 377px;
+                                }
                                 .contact-us__container {
                                     display: flex;
                                     row-gap: 35px;
@@ -716,6 +704,7 @@
                                     padding: 41px 20px 54px;
                                     background: #FBFBFB;
                                     box-shadow: unset;
+                                    margin: 0 -15px;
                                 }
                                 .form__header {
                                     grid-column-start: unset;

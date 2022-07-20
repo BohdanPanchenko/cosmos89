@@ -1,123 +1,13 @@
-//  ----------------------BURGER MENU--------------------------------
-const burgerBtn = document.querySelector('.burger');
-const navBar = document.querySelector('.menu');
-
-burgerBtn.addEventListener('click', (e) => {
-
-    if (navBar.classList.contains('menu_active')) {
-        navBar.classList.add('menu_out');
-        setTimeout(() => {
-            navBar.classList.remove('menu_out');
-            navBar.classList.toggle('menu_active');
-        }, 500)
-    } else {
-        navBar.classList.toggle('menu_active');
-    }
-
-    burgerBtn.classList.toggle('burger_active');
-})
-
-// ---------------------------COURSES PAGE TABS---------------------------------------
-const CoursesTitle = document.querySelector('.courses__title');
-const coursersButtons = document.querySelectorAll('.nav-menu__item button');
-const coursesCards = document.querySelectorAll('.item-courses');
-const dropDown = document.querySelector('.side-bar__drop-down');
-const dropDownBtn = document.querySelector('.side-bar__drop-down button');
-
-document.addEventListener('click', (e) => {
-    if (e.target.closest('.nav-menu__item')) {
-        CoursesTitle.innerHTML = e.target.innerHTML;
-
-        const innerDropDown = dropDown.textContent;
-        dropDown.innerHTML = e.target.textContent;
-        dropDown.appendChild(dropDownBtn);
-
-        coursersButtons.forEach(el => {
-            if (el.classList.contains('active'))
-                el.classList.remove('active');
-        })
-
-        e.target.classList.add('active');
-
-        const tagName = e.target.innerHTML.toLowerCase().replace(' ', '-');
-
-        coursesCards.forEach(el => {
-            const categories = el.dataset.category.split(' ');
-            let counter = 0;
-            categories.forEach(item => {
-                if (tagName === item) {
-                    el.classList.add('visible');
-                    counter++;
-                }
-            })
-            if (counter === 0) {
-                el.classList.remove('visible');
-            }
-        })
-    }
-
-    const sideBar = document.querySelector('.nav-menu'); // реализовыаем выпадающий список
-
-    if (e.target.closest('.side-bar__drop-down')) {
-        sideBar.classList.toggle('visible');
-        console.log(e.target + ' !!')
-    } else if (e.target.closest('.nav-menu')) {
-        setTimeout(() => {
-            sideBar.classList.toggle('visible');
-
-        }, 150)
-    }
-
-})
-
-// ---------------------------SWIPER SLIDER---------------------------------------
-if (document.querySelector('.swiper')) {
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        // spaceBetween: 104,
-        allowSlideNext: true,
-
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        slidesPerView: 1,
-        // slidesPerGroup: 1,
-        allowTouchMove: true,
-        touchRatio: 1.5,
-        centeredSlides: true,
-
-        // breakpoints: {
-        //     // when window width is >= 320px
-        //     320: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 20,
-        //         centeredSlides: false,
-
-        //     },
-        //     // when window width is >= 480px
-        //     696: {
-        //         slidesPerView: 2,
-        //         spaceBetween: 0
-        //     },
-        //     986: {
-        //         slidesPerView: 3,
-        //         spaceBetween: 0
-        //     },
-        //     // when window width is >= 640px
-        //     1280: {
-        //         slidesPerView: 4,
-        //         spaceBetween: 44
-        //     }
-        // }
-
-    });
-}
+const burgerBtn = document.querySelector(".burger"),
+    navBar = document.querySelector(".menu");
+burgerBtn.addEventListener("click", a => { navBar.classList.contains("menu_active") ? (navBar.classList.add("menu_out"), setTimeout(() => { navBar.classList.remove("menu_out"), navBar.classList.toggle("menu_active") }, 500)) : navBar.classList.toggle("menu_active"), burgerBtn.classList.toggle("burger_active") });
+const CoursesTitle = document.querySelector(".courses__title"),
+    coursersButtons = document.querySelectorAll(".nav-menu__item button"),
+    coursesCards = document.querySelectorAll(".item-courses"),
+    dropDown = document.querySelector(".side-bar__drop-down"),
+    dropDownBtn = document.querySelector(".side-bar__drop-down button");
+document.addEventListener("click", a => { if (a.target.closest(".nav-menu__item")) { CoursesTitle.innerHTML = a.target.innerHTML, dropDown.textContent, dropDown.innerHTML = a.target.textContent, dropDown.appendChild(dropDownBtn), coursersButtons.forEach(a => { a.classList.contains("active") && a.classList.remove("active") }), a.target.classList.add("active"); let c = a.target.innerHTML.toLowerCase().replace(" ", "-");
+        coursesCards.forEach(a => { let b = a.dataset.category.split(" "),
+                d = 0;
+            b.forEach(b => { c === b && (a.classList.add("visible"), d++) }), 0 === d && a.classList.remove("visible") }) } let b = document.querySelector(".nav-menu");
+    a.target.closest(".side-bar__drop-down") ? (b.classList.toggle("visible"), console.log(a.target + " !!")) : a.target.closest(".nav-menu") && setTimeout(() => { b.classList.toggle("visible") }, 150) }), document.querySelector(".swiper") && new Swiper(".swiper", { direction: "horizontal", loop: !0, allowSlideNext: !0, pagination: { el: ".swiper-pagination", clickable: !0 }, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, slidesPerView: 1, allowTouchMove: !0, touchRatio: 1.5, centeredSlides: !0 })
